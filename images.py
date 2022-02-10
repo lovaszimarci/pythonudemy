@@ -1,12 +1,9 @@
-
+ 
 from PIL import Image, ImageFilter
 
-img = Image.open('./pikachu.jpg')
-filtered_image = img.convert('L')
-crooked = filtered_image.rotate(90)
-crooked.save('grey_pikachu.png', 'png')
+img = Image.open('./astro.jpg')
+img.thumbnail((400, 400))
+img.save('thumbnailsizeastro.jpg')
 
-
-
-print(dir(img))
+print(img.size)
 
